@@ -18,3 +18,4 @@
 https://www.figma.com/design/2wcpgtLjv4Uapb6vREV2gj/DigitalLibrary?node-id=0-1&t=cEKRSyS98VRXyMqA-1
 
 Ссылка на репозиторий GitHub:
+https://github.com/polinauladykouskaya-boop/DigitalLibrary.git
