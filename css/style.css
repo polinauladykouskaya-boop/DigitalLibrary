@@ -1,414 +1,232 @@
+/* ================== СБРОС ================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ================== ОСНОВА ================== */
 body {
-  width: 1920px;
-  margin: 0 auto;
-}
-
-/* Общие стили для секций */
-.section {
-  width: 1920px;
-  height: 1080px;
-  position: relative;
-}
-
-.background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  left: 0;
-  top: 0;
-}
-
-.background-dark {
-  background: #d9d9d9;
-}
-
-.background-brown {
-  background: #4e312d;
-}
-
-.background-beige {
+  font-family: Roboto, sans-serif;
   background: #dfcdb9;
+  color: #1d1b20;
+  line-height: 1.6;
 }
 
-/* Первая секция */
-.bottom-section {
-  width: 1920px;
-  height: 540px;
-  left: 0;
-  top: 540px;
+/* ================== SKIP LINK ================== */
+
+.skip-link {
   position: absolute;
-}
-
-.bottom-content {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-.color-code {
-  left: 67px;
-  top: 137px;
-  position: absolute;
-  color: #fffcfc;
-  font-size: 30px;
-  font-family: Inter;
-  font-style: italic;
-  font-weight: 500;
-}
-
-.welcome-text {
-  left: 67px;
-  top: 93px;
-  position: absolute;
+  top: -100px;
+  left: 20px;
+  background: #4e312d;
   color: white;
-  font-size: 30px;
-  font-family: Inter;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-family: Inter, sans-serif;
   font-style: italic;
-  font-weight: 500;
+  border-radius: 6px;
+  transition: top 0.3s;
+  z-index: 1000;
 }
 
-.title {
-  width: 373px;
-  height: 47px;
-  left: 67px;
-  top: 46px;
-  position: absolute;
-  color: #fffcfc;
-  font-size: 32px;
-  font-family: Inter;
+/* Появляется при нажатии Tab */
+.skip-link:focus {
+  top: 20px;
+}
+
+/* ================== HEADER ================== */
+header {
+  background: #4e312d;
+  color: white;
+  padding: 20px 60px;
+}
+
+/* Верхняя часть */
+.top-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Логотип */
+.top-section img {
+  width: 60px;
+  height: auto;
+}
+
+/* Название сайта рядом с логотипом */
+.bottom-section h1 {
+  font-family: Inter, sans-serif;
   font-style: italic;
   font-weight: 600;
-}
-
-.top-section {
-  width: 1920px;
-  height: 537px;
-  left: 0;
-  top: 0;
-  position: absolute;
-}
-
-.logo {
-  width: 175px;
-  height: 175px;
-  left: 67px;
-  top: 36px;
-  position: absolute;
-}
-
-.color-code-beige {
-  left: 67px;
-  top: 247px;
-  position: absolute;
-  color: black;
-  font-size: 30px;
-  font-family: Inter;
-  font-style: italic;
-  font-weight: 500;
-}
-
-.text-block {
-  width: 673px;
-  height: 404px;
-  left: 1161px;
-  top: 350px;
-  position: absolute;
-}
-
-.text-block-bg {
-  width: 674px;
-  height: 404px;
-  left: 0;
-  top: 0;
-  position: absolute;
-  background: #988174;
-}
-
-.text-block-content {
-  width: 117px;
-  height: 54px;
-  left: 278px;
-  top: 175px;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: black;
-  font-size: 64px;
-  font-family: Roboto;
-  font-style: italic;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-}
-
-/* Вторая секция */
-.about-block {
-  width: 958px;
-  height: 314px;
-  left: 501px;
-  top: 169px;
-  position: absolute;
-}
-
-.about-bg {
-  width: 958px;
-  height: 314px;
-  left: 0;
-  top: 0;
-  position: absolute;
-  background: #4e312d;
-}
-
-.about-inner-bg {
-  width: 858px;
-  height: 156px;
-  left: 44px;
-  top: 125px;
-  position: absolute;
-  background: #988174;
-}
-
-.line {
-  width: 871.94px;
-  height: 0;
-  position: absolute;
-  outline: 3px #4e312d solid;
-  outline-offset: -1.5px;
-}
-
-.line-1 {
-  left: 43.83px;
-  top: 125.06px;
-  transform: rotate(10deg);
-  transform-origin: top left;
-}
-
-.line-2 {
-  left: 43.83px;
-  top: 281.38px;
-  transform: rotate(-10deg);
-  transform-origin: top left;
-}
-
-.about-title {
-  width: 514px;
-  height: 57px;
-  left: 44px;
-  top: 23px;
-  position: absolute;
-  color: white;
-  font-size: 64px;
-  font-family: Inter;
-  font-style: italic;
-  font-weight: 500;
-}
-
-/* Карточки */
-.card {
-  width: 417px;
-  height: 404px;
-  position: absolute;
-}
-
-.card-1 {
-  left: 41px;
-  top: 586px;
-}
-
-.card-2 {
-  left: 500px;
-  top: 586px;
-}
-
-.card-3 {
-  left: 959px;
-  top: 586px;
-}
-
-.card-4 {
-  width: 418.5px;
-  height: 498px;
-  left: 1418px;
-  top: 582px;
-  position: absolute;
-}
-
-.card-bg {
-  width: 417px;
-  height: 404px;
-  left: 0;
-  top: 0;
-  position: absolute;
-  background: #988174;
-}
-
-.card-4 .card-bg {
-  left: 1.5px;
-}
-
-.card-line {
-  width: 580.61px;
-  height: 0;
-  position: absolute;
-  outline: 3px #4e312d solid;
-  outline-offset: -1.5px;
-}
-
-.card-line-1 {
-  left: 0;
-  top: 0;
-  transform: rotate(44deg);
-  transform-origin: top left;
-}
-
-.card-line-2 {
-  left: 0;
-  top: 404px;
-  transform: rotate(-44deg);
-  transform-origin: top left;
-}
-
-.card-4 .card-line-1 {
-  top: 6px;
-}
-
-.card-4 .card-line-2 {
-  top: 410px;
-}
-
-.card-text {
-  width: 417px;
-  height: 54px;
-  left: 0;
-  top: 438px;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: black;
-  font-size: 40px;
-  font-family: Roboto;
-  font-style: italic;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-}
-
-.card-4 .card-text {
-  top: 444px;
-}
-
-/* Поисковая строка */
-.search-bar {
-  width: 1165px;
-  height: 85px;
-  left: 391px;
-  top: 39px;
-  position: absolute;
-  background: #988174;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  overflow: hidden;
-  border-radius: 28px;
-  outline: 1px black solid;
-  outline-offset: -0.5px;
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.search-content {
-  flex: 1 1 0;
-  align-self: stretch;
-  padding: 4px;
-  position: relative;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-.search-icon {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-}
-
-.icon-wrapper {
-  width: 96px;
-  overflow: hidden;
-  border-radius: 100px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  display: inline-flex;
-}
-
-.icon-inner {
-  align-self: stretch;
-  height: 96px;
-  justify-content: center;
-  align-items: center;
-  display: inline-flex;
-}
-
-.icon-shape {
-  width: 32px;
-  height: 32px;
-  position: relative;
-  overflow: hidden;
-}
-
-.icon-shape div {
-  width: 24px;
-  height: 16px;
-  left: 4px;
-  top: 8px;
-  position: absolute;
-  background: var(--Schemes-On-Background, #1d1b20);
-}
-
-.icon-shape-square {
-  width: 32px;
-  height: 32px;
-  position: relative;
-  overflow: hidden;
-}
-
-.icon-shape-square div {
-  width: 24px;
-  height: 24px;
-  left: 4px;
-  top: 4px;
-  position: absolute;
-  background: var(--Schemes-On-Background, #1d1b20);
-}
-
-.search-text {
-  flex: 1 1 0;
-  padding-left: 20px;
-  padding-right: 20px;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  color: var(--Schemes-On-Background, #1d1b20);
   font-size: 32px;
-  font-family: Roboto;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0.5px;
+  margin-top: 15px;
 }
 
-.search-trailing-icon {
-  left: 1065px;
-  top: -5px;
-  position: absolute;
+/* Навигация */
+nav ul {
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
+  gap: 30px;
+  list-style: none;
+  margin-top: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #dfcdb9;
+  font-family: Inter, sans-serif;
+  font-style: italic;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ================== MAIN ================== */
+main {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* ================== PRODUCT CARD ================== */
+article[itemscope] {
+  background: #988174;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Название книги — белое */
+article h2 {
+  font-family: Inter, sans-serif;
+  font-style: italic;
+  font-weight: 600;
+  font-size: 36px;
+  margin-bottom: 30px;
+  color: white;
+}
+
+/* Главное изображение */
+figure {
+  margin-bottom: 30px;
+}
+
+figure img {
+  width: 250px;
+  border-radius: 8px;
+}
+
+figcaption {
+  font-style: italic;
+  margin-top: 10px;
+}
+
+/* Заголовки секций */
+section h3,
+main > section > h2 {
+  font-family: Inter, sans-serif;
+  font-style: italic;
+  font-weight: 500;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #4e312d;
+}
+
+/* ================== OFFER ================== */
+section[itemprop='offers'] {
+  background: #dfcdb9;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+[itemprop='price'] {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* ================== ГАЛЕРЕЯ ================== */
+
+/* Контейнер галереи */
+main > section:nth-of-type(2) {
+  margin-top: 40px;
+}
+
+/* Обертка для изображений */
+main > section:nth-of-type(2) {
+  display: block;
+}
+
+/* Делаем изображения в строку */
+main > section:nth-of-type(2) figure {
+  display: inline-block;
+  margin-right: 40px;
+  vertical-align: top;
+}
+
+main > section:nth-of-type(2) img {
+  width: 200px;
+  border-radius: 6px;
+}
+
+/* ================== ПОХОЖИЕ КНИГИ ================== */
+
+/* Контейнер секции */
+main > section:last-of-type {
+  margin-top: 60px;
+}
+
+/* Заголовок */
+main > section:last-of-type > h2 {
+  margin-bottom: 30px;
+}
+
+/* Обертка карточек */
+main > section:last-of-type article {
+  display: inline-block;
+  vertical-align: top;
+  background: #988174;
+  padding: 20px;
+  border-radius: 8px;
+  width: 250px;
+  margin-right: 40px;
+}
+
+/* Названия книг — белые */
+main > section:last-of-type article h3 {
+  color: white;
+  font-family: Inter, sans-serif;
+  font-style: italic;
+}
+
+/* Изображения похожих книг */
+main > section:last-of-type img {
+  width: 100%;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+/* ================== ASIDE ================== */
+aside {
+  background: #4e312d;
+  color: white;
+  padding: 30px 60px;
+  margin-top: 60px;
+}
+
+aside h2 {
+  font-family: Inter, sans-serif;
+  font-style: italic;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* ================== FOOTER ================== */
+footer {
+  background: #988174;
+  text-align: center;
+  padding: 20px;
+  font-style: italic;
 }
