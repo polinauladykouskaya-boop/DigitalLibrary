@@ -1,36 +1,414 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    margin-top: 50px;
-    background-color: #f0f0f0;
+  width: 1920px;
+  margin: 0 auto;
 }
 
-h1 {
-    color: #333;
+/* Общие стили для секций */
+.section {
+  width: 1920px;
+  height: 1080px;
+  position: relative;
 }
 
-p {
-    color: #666;
-    font-size: 18px;
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 20px;
+.background-dark {
+  background: #d9d9d9;
 }
 
-button:hover {
-    background-color: #45a049;
+.background-brown {
+  background: #4e312d;
 }
 
-#message {
-    margin-top: 20px;
-    font-weight: bold;
+.background-beige {
+  background: #dfcdb9;
+}
+
+/* Первая секция */
+.bottom-section {
+  width: 1920px;
+  height: 540px;
+  left: 0;
+  top: 540px;
+  position: absolute;
+}
+
+.bottom-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.color-code {
+  left: 67px;
+  top: 137px;
+  position: absolute;
+  color: #fffcfc;
+  font-size: 30px;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.welcome-text {
+  left: 67px;
+  top: 93px;
+  position: absolute;
+  color: white;
+  font-size: 30px;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.title {
+  width: 373px;
+  height: 47px;
+  left: 67px;
+  top: 46px;
+  position: absolute;
+  color: #fffcfc;
+  font-size: 32px;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 600;
+}
+
+.top-section {
+  width: 1920px;
+  height: 537px;
+  left: 0;
+  top: 0;
+  position: absolute;
+}
+
+.logo {
+  width: 175px;
+  height: 175px;
+  left: 67px;
+  top: 36px;
+  position: absolute;
+}
+
+.color-code-beige {
+  left: 67px;
+  top: 247px;
+  position: absolute;
+  color: black;
+  font-size: 30px;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.text-block {
+  width: 673px;
+  height: 404px;
+  left: 1161px;
+  top: 350px;
+  position: absolute;
+}
+
+.text-block-bg {
+  width: 674px;
+  height: 404px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: #988174;
+}
+
+.text-block-content {
+  width: 117px;
+  height: 54px;
+  left: 278px;
+  top: 175px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  font-size: 64px;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+/* Вторая секция */
+.about-block {
+  width: 958px;
+  height: 314px;
+  left: 501px;
+  top: 169px;
+  position: absolute;
+}
+
+.about-bg {
+  width: 958px;
+  height: 314px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: #4e312d;
+}
+
+.about-inner-bg {
+  width: 858px;
+  height: 156px;
+  left: 44px;
+  top: 125px;
+  position: absolute;
+  background: #988174;
+}
+
+.line {
+  width: 871.94px;
+  height: 0;
+  position: absolute;
+  outline: 3px #4e312d solid;
+  outline-offset: -1.5px;
+}
+
+.line-1 {
+  left: 43.83px;
+  top: 125.06px;
+  transform: rotate(10deg);
+  transform-origin: top left;
+}
+
+.line-2 {
+  left: 43.83px;
+  top: 281.38px;
+  transform: rotate(-10deg);
+  transform-origin: top left;
+}
+
+.about-title {
+  width: 514px;
+  height: 57px;
+  left: 44px;
+  top: 23px;
+  position: absolute;
+  color: white;
+  font-size: 64px;
+  font-family: Inter;
+  font-style: italic;
+  font-weight: 500;
+}
+
+/* Карточки */
+.card {
+  width: 417px;
+  height: 404px;
+  position: absolute;
+}
+
+.card-1 {
+  left: 41px;
+  top: 586px;
+}
+
+.card-2 {
+  left: 500px;
+  top: 586px;
+}
+
+.card-3 {
+  left: 959px;
+  top: 586px;
+}
+
+.card-4 {
+  width: 418.5px;
+  height: 498px;
+  left: 1418px;
+  top: 582px;
+  position: absolute;
+}
+
+.card-bg {
+  width: 417px;
+  height: 404px;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: #988174;
+}
+
+.card-4 .card-bg {
+  left: 1.5px;
+}
+
+.card-line {
+  width: 580.61px;
+  height: 0;
+  position: absolute;
+  outline: 3px #4e312d solid;
+  outline-offset: -1.5px;
+}
+
+.card-line-1 {
+  left: 0;
+  top: 0;
+  transform: rotate(44deg);
+  transform-origin: top left;
+}
+
+.card-line-2 {
+  left: 0;
+  top: 404px;
+  transform: rotate(-44deg);
+  transform-origin: top left;
+}
+
+.card-4 .card-line-1 {
+  top: 6px;
+}
+
+.card-4 .card-line-2 {
+  top: 410px;
+}
+
+.card-text {
+  width: 417px;
+  height: 54px;
+  left: 0;
+  top: 438px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
+  font-size: 40px;
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.card-4 .card-text {
+  top: 444px;
+}
+
+/* Поисковая строка */
+.search-bar {
+  width: 1165px;
+  height: 85px;
+  left: 391px;
+  top: 39px;
+  position: absolute;
+  background: #988174;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+  border-radius: 28px;
+  outline: 1px black solid;
+  outline-offset: -0.5px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-content {
+  flex: 1 1 0;
+  align-self: stretch;
+  padding: 4px;
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.search-icon {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.icon-wrapper {
+  width: 96px;
+  overflow: hidden;
+  border-radius: 100px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+.icon-inner {
+  align-self: stretch;
+  height: 96px;
+  justify-content: center;
+  align-items: center;
+  display: inline-flex;
+}
+
+.icon-shape {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-shape div {
+  width: 24px;
+  height: 16px;
+  left: 4px;
+  top: 8px;
+  position: absolute;
+  background: var(--Schemes-On-Background, #1d1b20);
+}
+
+.icon-shape-square {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.icon-shape-square div {
+  width: 24px;
+  height: 24px;
+  left: 4px;
+  top: 4px;
+  position: absolute;
+  background: var(--Schemes-On-Background, #1d1b20);
+}
+
+.search-text {
+  flex: 1 1 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: var(--Schemes-On-Background, #1d1b20);
+  font-size: 32px;
+  font-family: Roboto;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+}
+
+.search-trailing-icon {
+  left: 1065px;
+  top: -5px;
+  position: absolute;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
