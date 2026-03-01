@@ -1,0 +1,37 @@
+:root {
+	--color-dark-brown: rgba(78,49,45,1);
+	--color-light-brown: rgba(223,205,185,1);
+	--color-brown: rgba(152,128,116,1);
+}
+.text-style-extra-bold-style {
+	font-size: 40px;
+	font-family: Inter;
+	font-style: italic;
+	font-weight: 400;
+	text-decoration: none;
+	text-transform: none;
+}
+.text-style-italic-style {
+	font-size: 20px;
+	font-family: Inter;
+	font-style: italic;
+	font-weight: 400;
+	text-decoration: none;
+	text-transform: none;
+}
+.text-style-semi-bold-style {
+	font-size: 17px;
+	font-family: Inter;
+	font-style: italic;
+	font-weight: 400;
+	text-decoration: none;
+	text-transform: none;
+}
+.text-style-medium-style {
+	font-size: 17px;
+	font-family: Inter;
+	font-weight: 500;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: none;
+}
