@@ -1,0 +1,17 @@
+:root {
+  --color-background: #dfcdb9;
+  --color-primary: #4e312d;
+  --color-card: #988174;
+  --color-text: #1d1b20;
+  --color-white: #ffffff;
+
+  --font-main: Roboto, sans-serif;
+  --font-accent: Inter, sans-serif;
+
+  --space-sm: 10px;
+  --space-md: 20px;
+  --space-lg: 40px;
+
+  --tablet: 768px;
+  --desktop: 1024px;
+}
