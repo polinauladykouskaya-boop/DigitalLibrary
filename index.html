@@ -1,92 +1,238 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DigitalLibrary</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DigitalLibrary — Война и мир</title>
+  
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/search.css" />
+  <link rel="stylesheet" href="css/reviews.css" />
+  <link rel="stylesheet" href="css/favorites.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
 </head>
 <body>
-    <script src="js/script.js"></script>
-<div style="width: 1920px; height: 1080px; position: relative">
-  <div style="width: 1920px; height: 1080px; left: 0px; top: 0px; position: absolute; background: #D9D9D9"></div>
-  <div style="width: 1920px; height: 540px; left: 0px; top: 540px; position: absolute">
-    <div style="width: 1920px; height: 540px; left: 0px; top: 0px; position: absolute; background: #4E312D"></div>
-    <div style="left: 67px; top: 137px; position: absolute; color: #FFFCFC; font-size: 30px; font-family: Inter; font-style: italic; font-weight: 500; word-wrap: break-word">#4E312D</div>
-    <div style="left: 67px; top: 93px; position: absolute; color: white; font-size: 30px; font-family: Inter; font-style: italic; font-weight: 500; word-wrap: break-word">Welcome</div>
-    <div style="width: 373px; height: 47px; left: 67px; top: 46px; position: absolute; color: #FFFCFC; font-size: 32px; font-family: Inter; font-style: italic; font-weight: 600; word-wrap: break-word">Digital Library</div>
-  </div>
-  <div style="width: 1920px; height: 537px; left: 0px; top: 0px; position: absolute">
-    <div style="width: 1920px; height: 540px; left: 0px; top: -5px; position: absolute; background: #DFCDB9"></div>
-    <img style="width: 175px; height: 175px; left: 67px; top: 36px; position: absolute" src="https://placehold.co/175x175" />
-    <div style="left: 67px; top: 247px; position: absolute; color: black; font-size: 30px; font-family: Inter; font-style: italic; font-weight: 500; word-wrap: break-word">#DFCDB9</div>
-  </div>
-  <div style="width: 673px; height: 404px; left: 1161px; top: 350px; position: absolute">
-    <div style="width: 674px; height: 404px; left: 0px; top: 0px; position: absolute; background: #988174"></div>
-    <div style="width: 117px; height: 54px; left: 278px; top: 175px; position: absolute; justify-content: center; display: flex; flex-direction: column; color: black; font-size: 64px; font-family: Roboto; font-style: italic; font-weight: 500; line-height: 24px; letter-spacing: 0.50px; word-wrap: break-word">text</div>
-  </div>
-</div>
+  <a href="#main" class="skip-link">Перейти к основному содержимому</a>
 
-<div style="width: 1920px; height: 1080px; position: relative">
-  <div style="width: 1920px; height: 1080px; left: 0px; top: 0px; position: absolute; background: #DFCDB9"></div>
-  <div style="width: 958px; height: 314px; left: 501px; top: 169px; position: absolute">
-    <div style="width: 958px; height: 314px; left: 0px; top: 0px; position: absolute; background: #4E312D"></div>
-    <div style="width: 858px; height: 156px; left: 44px; top: 125px; position: absolute; background: #988174"></div>
-    <div style="width: 871.94px; height: 0px; left: 43.83px; top: 125.06px; position: absolute; transform: rotate(10deg); transform-origin: top left; outline: 3px #4E312D solid; outline-offset: -1.50px"></div>
-    <div style="width: 871.94px; height: 0px; left: 43.83px; top: 281.38px; position: absolute; transform: rotate(-10deg); transform-origin: top left; outline: 3px #4E312D solid; outline-offset: -1.50px"></div>
-    <div style="width: 514px; height: 57px; left: 44px; top: 23px; position: absolute; color: white; font-size: 64px; font-family: Inter; font-style: italic; font-weight: 500; word-wrap: break-word">О НАС</div>
-  </div>
-  <div style="width: 417px; height: 404px; left: 959px; top: 586px; position: absolute">
-    <div style="width: 417px; height: 404px; left: 0px; top: 0px; position: absolute; background: #988174"></div>
-    <div style="width: 580.61px; height: 0px; left: 0px; top: 404px; position: absolute; transform: rotate(-44deg); transform-origin: top left; outline: 3px #4E312D solid; outline-offset: -1.50px"></div>
-    <div style="width: 580.61px; height: 0px; left: 0px; top: 0px; position: absolute; transform: rotate(44deg); transform-origin: top left; outline: 3px #4E312D solid; outline-offset: -1.50px"></div>
-    <div style="width: 417px; height: 54px; left: 1px; top: 438px; position: absolute; justify-content: center; display: flex; flex-direction: column; color: black; font-size: 40px; font-family: Roboto; font-style: italic; font-weight: 500; line-height: 24px; letter-spacing: 0.50px; word-wrap: break-word">text</div>
-  </div>
-  <div style="width: 417px; height: 404px; left: 500px; top: 586px; position: absolute">
-    <div style="width: 417px; height: 404px; left: 0px; top: 0px; position: absolute; background: #988174"></div>
-    <div style="width: 580.61px; height: 0px; left: 0px; top: 404px; position: absolute; transform: rotate(-44deg); transform-origin: top left; outline: 3px #4E312D solid; outline-offset: -1.50px"></div>
-    <div style="width: 580.61px; height: 0px; left: 0px; top: 0px; position: absolute; transform: rotate(44deg); transform-origin: top left; outline: 3px #4E312D solid; outline-offset: -1.50px"></div>
-    <div style="width: 417px; height: 54px; left: 0px; top: 438px; position: absolute; justify-content: center; display: flex; flex-direction: column; color: black; font-size: 40px; font-family: Roboto; font-style: italic; font-weight: 500; line-height: 24px; letter-spacing: 0.50px; word-wrap: break-word">text</div>
-  </div>
-  <div style="width: 418.50px; height: 498px; left: 1418px; top: 582px; position: absolute">
-    <div style="width: 417px; height: 404px; left: 1.50px; top: 0px; position: absolute; background: #988174"></div>
-    <div style="width: 580.61px; height: 0px; left: 0px; top: 410px; position: absolute; transform: rotate(-44deg); transform-origin: top left; outline: 3px #4E312D solid; outline-offset: -1.50px"></div>
-    <div style="width: 580.61px; height: 0px; left: 0px; top: 6px; position: absolute; transform: rotate(44deg); transform-origin: top left; outline: 3px #4E312D solid; outline-offset: -1.50px"></div>
-    <div style="width: 417px; height: 54px; left: 0px; top: 444px; position: absolute; justify-content: center; display: flex; flex-direction: column; color: black; font-size: 40px; font-family: Roboto; font-style: italic; font-weight: 500; line-height: 24px; letter-spacing: 0.50px; word-wrap: break-word">text</div>
-  </div>
-  <div data-show-1st-trailing-icon="true" data-show-2nd-trailing-icon="false" data-show-avatar="False" data-show-leading-icon="true" data-state="Enabled" style="width: 1165px; height: 85px; left: 391px; top: 39px; position: absolute; background: #988174; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); overflow: hidden; border-radius: 28px; outline: 1px black solid; outline-offset: -0.50px; justify-content: space-between; align-items: center; display: inline-flex">
-    <div style="flex: 1 1 0; align-self: stretch; padding: 4px; position: relative; justify-content: flex-start; align-items: center; display: flex">
-      <div data-show-focus-indicator="false" data-size="Large" data-state="Enabled" data-type="Round" data-width="Default" style="justify-content: center; align-items: center; display: flex">
-        <div style="width: 96px; overflow: hidden; border-radius: 100px; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-          <div style="align-self: stretch; height: 96px; justify-content: center; align-items: center; display: inline-flex">
-            <div style="width: 32px; height: 32px; position: relative; overflow: hidden">
-              <div style="width: 24px; height: 16px; left: 4px; top: 8px; position: absolute; background: var(--Schemes-On-Background, #1D1B20)"></div>
-            </div>
-          </div>
+  <header class="header">
+    <div class="header__top">
+      <img 
+        class="header__logo" 
+        src="images/logo.png" 
+        alt="Логотип библиотеки Digital Library" 
+      />
+      
+      <button class="header__burger" id="burger">&equiv;</button>
+      
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Каталог</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Новинки</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="header__bottom">
+      <h1 class="header__title">Digital Library</h1>
+    </div>
+  </header>
+
+  <div class="user-panel">
+    <div class="user-panel__container">
+      <div class="search-widget">
+        <h3 class="search-widget__title">Поиск книг</h3>
+        <div class="search-widget__container">
+          <input type="text" id="search-input" class="search-widget__input" 
+                 placeholder="Введите название или автора..." autocomplete="off">
+          <div id="search-suggestions" class="search-widget__suggestions"></div>
         </div>
       </div>
-      <div style="flex: 1 1 0; padding-left: 20px; padding-right: 20px; justify-content: flex-start; align-items: center; gap: 10px; display: flex">
-        <div style="justify-content: center; display: flex; flex-direction: column; color: var(--Schemes-On-Background, #1D1B20); font-size: 32px; font-family: Roboto; font-weight: 400; line-height: 24px; letter-spacing: 0.50px; word-wrap: break-word">Hinted search text</div>
-      </div>
-      <div style="left: 1065px; top: -5px; position: absolute; justify-content: flex-end; align-items: center; display: flex">
-        <div data-show-focus-indicator="false" data-size="Large" data-state="Enabled" data-type="Round" data-width="Default" style="justify-content: center; align-items: center; display: flex">
-          <div style="width: 96px; overflow: hidden; border-radius: 100px; flex-direction: column; justify-content: center; align-items: center; display: inline-flex">
-            <div style="align-self: stretch; height: 96px; justify-content: center; align-items: center; display: inline-flex">
-              <div style="width: 32px; height: 32px; position: relative; overflow: hidden">
-                <div style="width: 24px; height: 24px; left: 4px; top: 4px; position: absolute; background: var(--Schemes-On-Background, #1D1B20)"></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      
+      <div class="favorites-widget"></div>
     </div>
   </div>
-  <div style="width: 417px; height: 404px; left: 41px; top: 586px; position: absolute">
-    <div style="width: 417px; height: 404px; left: 0px; top: 0px; position: absolute; background: #988174"></div>
-    <div style="width: 580.61px; height: 0px; left: 0px; top: 0px; position: absolute; transform: rotate(44deg); transform-origin: top left; outline: 3px #4E312D solid; outline-offset: -1.50px"></div>
-    <div style="width: 580.61px; height: 0px; left: 0px; top: 404px; position: absolute; transform: rotate(-44deg); transform-origin: top left; outline: 3px #4E312D solid; outline-offset: -1.50px"></div>
-    <div style="width: 417px; height: 54px; left: 0px; top: 438px; position: absolute; justify-content: center; display: flex; flex-direction: column; color: black; font-size: 40px; font-family: Roboto; font-style: italic; font-weight: 500; line-height: 24px; letter-spacing: 0.50px; word-wrap: break-word">text</div>
+
+  <div class="layout">
+    <main class="main-content" id="main">
+      <article class="book-card" itemscope itemtype="https://schema.org/Product">
+        <meta itemprop="additionalType" content="https://schema.org/Book" />
+        
+        <header class="book-card__header">
+          <h2 class="book-card__title" itemprop="name">Война и мир</h2>
+        </header>
+        
+        <figure class="figure">
+          <img 
+            class="figure__image" 
+            src="images/book1.png" 
+            alt="Обложка книги Война и мир" 
+            itemprop="image" 
+          />
+          <figcaption class="figure__caption">
+            Классический роман Льва Толстого
+          </figcaption>
+        </figure>
+        
+        <section class="section">
+          <h3 class="section__title">Описание книги</h3>
+          <p class="section__text" itemprop="description">
+            «Война и мир» — роман-эпопея Льва Толстого
+          </p>
+        </section>
+        
+        <section class="section">
+          <h3 class="section__title">Характеристики</h3>
+          
+          <p class="section__text">
+            <span class="section__label">Автор:</span> 
+            <span class="section__value" itemprop="author">Лев Толстой</span>
+          </p>
+          <p class="section__text">
+            <span class="section__label">ISBN:</span> 
+            <span class="section__value" itemprop="isbn">978-5-17-118366-3</span>
+          </p>
+          <p class="section__text">
+            <span class="section__label">Год публикации:</span>
+            <time class="section__value" itemprop="datePublished" datetime="1869">1869</time>
+          </p>
+          <p class="section__text">
+            <span class="section__label">Жанр:</span> 
+            <span class="section__value" itemprop="genre">Исторический роман</span>
+          </p>
+        </section>
+        
+        <section class="section section--offer" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <h3 class="section__title">Доступность</h3>
+          
+          <meta itemprop="priceCurrency" content="BYN" />
+          <meta itemprop="price" content="10" />
+          <link itemprop="availability" href="https://schema.org/InStock" />
+          
+          <p class="section__text section__text--availability">
+            В наличии
+          </p>
+        </section>
+        
+        <div class="favorite-button-container">
+          <button class="button button--favorite" data-book-id="war-and-peace">
+            <span class="favorite-icon">&hearts;</span> В избранное
+          </button>
+        </div>
+      </article>
+      
+      <section class="gallery">
+        <h2 class="gallery__title">Галерея</h2>
+        
+        <div class="gallery__grid">
+          <figure class="figure">
+            <img class="figure__image" src="images/book1-back.png" alt="Задняя сторона обложки" />
+            <figcaption class="figure__caption">Задняя сторона обложки</figcaption>
+          </figure>
+          
+          <figure class="figure">
+            <img class="figure__image" src="images/book1-inside.png" alt="Фрагмент страниц книги" />
+            <figcaption class="figure__caption">Фрагмент страниц книги</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="similar">
+        <h2 class="similar__title">Похожие книги</h2>
+        
+        <div class="similar__grid">
+          <article class="book-preview">
+            <h3 class="book-preview__title">Анна Каренина</h3>
+            <img class="book-preview__image" src="images/book2.png" alt="Обложка книги Анна Каренина" />
+            <button class="button button--favorite button--small" data-book-id="anna-karenina" 
+                    style="margin-top: 10px; width: 100%;">
+              <span class="favorite-icon">&hearts;</span> В избранное
+            </button>
+          </article>
+          
+          <article class="book-preview">
+            <h3 class="book-preview__title">Тихий Дон</h3>
+            <img class="book-preview__image" src="images/book3.png" alt="Обложка книги Тихий Дон" />
+            <button class="button button--favorite button--small" data-book-id="quiet-don" 
+                    style="margin-top: 10px; width: 100%;">
+              <span class="favorite-icon">&hearts;</span> В избранное
+            </button>
+          </article>
+        </div>
+      </section>
+      
+      <section class="reviews-section">
+        <h2 class="reviews-section__title">Отзывы читателей</h2>
+        
+        <div class="reviews-section__rating">
+          <span class="rating-label">Средняя оценка:</span>
+          <div class="rating-stars" id="average-rating-stars">
+            ☆☆☆☆☆
+          </div>
+          <span class="rating-value" id="average-rating-value">0.0</span>
+        </div>
+        
+        <div class="reviews-list" id="reviews-list">
+        </div>
+        
+        <section class="reviews-form">
+          <h3 class="reviews-form__title">Добавить отзыв</h3>
+          <form id="review-form">
+            <div class="form-group">
+              <label for="review-name" class="form-label">Ваше имя:</label>
+              <input type="text" id="review-name" class="form-input" required minlength="2">
+            </div>
+            
+            <fieldset class="form-group">
+              <legend class="form-label">Оценка:</legend>
+              <div class="rating-input" id="rating-input">
+                <span class="star" data-rating="1" role="button" tabindex="0" aria-label="Оценка 1">&star;</span>
+                <span class="star" data-rating="2" role="button" tabindex="0" aria-label="Оценка 2">&star;</span>
+                <span class="star" data-rating="3" role="button" tabindex="0" aria-label="Оценка 3">&star;</span>
+                <span class="star" data-rating="4" role="button" tabindex="0" aria-label="Оценка 4">&star;</span>
+                <span class="star" data-rating="5" role="button" tabindex="0" aria-label="Оценка 5">&star;</span>
+              </div>
+              <input type="hidden" id="review-rating" value="0">
+            </fieldset>
+            
+            <div class="form-group">
+              <label for="review-text" class="form-label">Ваш отзыв:</label>
+              <textarea id="review-text" class="form-textarea" rows="3" required minlength="10"></textarea>
+            </div>
+            
+            <button type="submit" class="button button--primary">Оставить отзыв</button>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <h2 class="sidebar__title">Новости библиотеки</h2>
+      <p class="sidebar__text">Скоро поступление новых исторических романов.</p>
+    </aside>
   </div>
-</div>
+
+  <footer class="footer">
+    <p class="footer__text">&copy; 2026 Digital Library. Все права защищены.</p>
+  </footer>
+
+  <script type="module" src="js/script.js"></script>
 </body>
 </html>

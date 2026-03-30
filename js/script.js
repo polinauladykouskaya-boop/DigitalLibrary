@@ -1,12 +1,30 @@
+import { initSearch } from './components/search.js';
+import { initReviews } from './components/reviews.js';
+import { initFavorites } from './components/favorites.js';
+
 document.addEventListener('DOMContentLoaded', function() {
-
-    const button = document.getElementById('myButton');
-    const message = document.getElementById('message');
-
-    button.addEventListener('click', function() {
-        message.textContent = 'кнопка нажата';
-        message.style.color = '#4CAF50';
-    });
-
-       console.log('cтраница загружена и готова к работе');
-    });
+  try {
+    const burger = document.getElementById('burger');
+    const nav = document.getElementById('nav');
+    
+    if (burger && nav) {
+      burger.addEventListener('click', function() {
+        nav.classList.toggle('nav--active');
+        console.log('Бургер-меню переключено');
+      });
+    } else {
+      console.warn('Элементы бургер-меню не найдены');
+    }
+    
+    console.log('Запуск инициализации компонентов...');
+    
+    initSearch();
+    initReviews();
+    initFavorites();
+    
+    console.log('Все компоненты успешно инициализированы');
+    
+  } catch (error) {
+    console.error('Ошибка при инициализации приложения:', error);
+  }
+});

@@ -1,0 +1,13 @@
+.footer {
+  background: var(--color-card);
+  text-align: center;
+  padding: var(--space-lg);
+  margin-top: var(--space-lg);
+  border-top: 2px solid var(--color-primary);
+}
+
+.footer__text {
+  font-style: italic;
+  color: white;
+  opacity: 0.9;
+}
