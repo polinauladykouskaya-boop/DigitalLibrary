@@ -1,138 +1,161 @@
 <!doctype html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DigitalLibrary — Война и мир</title>
+  
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/footer.css" />
+  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <a href="#main" class="skip-link">Перейти к основному содержимому</a>
 
-    <title>DigitalLibrary — Война и мир</title>
-
-    <link rel="stylesheet" href="css/variables.css" />
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/header.css" />
-    <link rel="stylesheet" href="css/main.css" />
-    <link rel="stylesheet" href="css/footer.css" />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto&family=Inter:wght@400;500;600&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-
-  <body>
-    <a href="#main" class="skip-link">Перейти к основному содержимому</a>
-
-    <header>
-      <div class="top-section">
-        <img src="images/logo.png" alt="Логотип библиотеки Digital Library" />
-
-        <button class="burger" id="burger">☰</button>
-
-        <nav id="nav">
-          <ol class="nav-list">
-            <li><a href="#">Главная</a></li>
-            <li><a href="#">Каталог</a></li>
-            <li><a href="#">Новинки</a></li>
-            <li><a href="#">Контакты</a></li>
-          </ol>
-        </nav>
-      </div>
-
-      <div class="bottom-section">
-        <h1>Digital Library</h1>
-      </div>
-    </header>
-
-    <div class="layout">
-      <main id="main">
-        <article itemscope itemtype="https://schema.org/Product">
-          <meta itemprop="additionalType" content="https://schema.org/Book" />
-
-          <header>
-            <h2 itemprop="name">Война и мир</h2>
-          </header>
-
-          <figure>
-            <img src="images/book1.png" alt="Обложка книги Война и мир" itemprop="image" />
-
-            <figcaption>Классический роман Льва Толстого</figcaption>
-          </figure>
-
-          <section>
-            <h3>Описание книги</h3>
-
-            <p itemprop="description">«Война и мир» — роман-эпопея Льва Толстого</p>
-          </section>
-
-          <section>
-            <h3>Характеристики</h3>
-
-            <p>Автор: <span itemprop="author">Лев Толстой</span></p>
-            <p>ISBN: <span itemprop="isbn">978-5-17-118366-3</span></p>
-
-            <p>
-              Год публикации:
-              <time itemprop="datePublished" datetime="1869">1869</time>
-            </p>
-
-            <p>Жанр: <span itemprop="genre">Исторический роман</span></p>
-          </section>
-
-          <section itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-            <h3>Доступность</h3>
-
-            <meta itemprop="priceCurrency" content="BYN" />
-            <meta itemprop="price" content="10" />
-
-            <link itemprop="availability" href="https://schema.org/InStock" />
-
-            В наличии
-          </section>
-        </article>
-
-        <section class="gallery">
-          <h2>Галерея</h2>
-
-          <div class="gallery-grid">
-            <figure>
-              <img src="images/book1-back.png" />
-              <figcaption>Задняя сторона обложки</figcaption>
-            </figure>
-
-            <figure>
-              <img src="images/book1-inside.png" />
-              <figcaption>Фрагмент страниц книги</figcaption>
-            </figure>
-          </div>
-        </section>
-
-        <section class="similar">
-          <h2>Похожие книги</h2>
-
-          <div class="similar-grid">
-            <article>
-              <h3>Анна Каренина</h3>
-              <img src="images/book2.png" />
-            </article>
-
-            <article>
-              <h3>Тихий Дон</h3>
-              <img src="images/book3.png" />
-            </article>
-          </div>
-        </section>
-      </main>
-
-      <aside class="sidebar">
-        <h2>Новости библиотеки</h2>
-
-        <p>Скоро поступление новых исторических романов.</p>
-      </aside>
+  <header class="header">
+    <div class="header__top">
+      <img 
+        class="header__logo" 
+        src="images/logo.png" 
+        alt="Логотип библиотеки Digital Library" 
+      />
+      
+      <button class="header__burger" id="burger">☰</button>
+      
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Каталог</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Новинки</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
     </div>
+    
+    <div class="header__bottom">
+      <h1 class="header__title">Digital Library</h1>
+    </div>
+  </header>
 
-    <footer>
-      <p>© 2026 Digital Library. Все права защищены.</p>
-    </footer>
+  <div class="layout">
+    <main class="main-content" id="main">
+      <article class="book-card" itemscope itemtype="https://schema.org/Product">
+        <meta itemprop="additionalType" content="https://schema.org/Book" />
+        
+        <header class="book-card__header">
+          <h2 class="book-card__title" itemprop="name">Война и мир</h2>
+        </header>
+        
+        <figure class="figure">
+          <img 
+            class="figure__image" 
+            src="images/book1.png" 
+            alt="Обложка книги Война и мир" 
+            itemprop="image" 
+          />
+          <figcaption class="figure__caption">
+            Классический роман Льва Толстого
+          </figcaption>
+        </figure>
+        
+        <section class="section">
+          <h3 class="section__title">Описание книги</h3>
+          <p class="section__text" itemprop="description">
+            «Война и мир» — роман-эпопея Льва Толстого
+          </p>
+        </section>
+        
+        <section class="section">
+          <h3 class="section__title">Характеристики</h3>
+          
+          <p class="section__text">
+            <span class="section__label">Автор:</span> 
+            <span class="section__value" itemprop="author">Лев Толстой</span>
+          </p>
+          <p class="section__text">
+            <span class="section__label">ISBN:</span> 
+            <span class="section__value" itemprop="isbn">978-5-17-118366-3</span>
+          </p>
+          <p class="section__text">
+            <span class="section__label">Год публикации:</span>
+            <time class="section__value" itemprop="datePublished" datetime="1869">1869</time>
+          </p>
+          <p class="section__text">
+            <span class="section__label">Жанр:</span> 
+            <span class="section__value" itemprop="genre">Исторический роман</span>
+          </p>
+        </section>
+        
+        <section class="section section--offer" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <h3 class="section__title">Доступность</h3>
+          
+          <meta itemprop="priceCurrency" content="BYN" />
+          <meta itemprop="price" content="10" />
+          <link itemprop="availability" href="https://schema.org/InStock" />
+          
+          <p class="sectiontext sectiontext--availability">
+            В наличии
+          </p>
+        </section>
+      </article>
+      <section class="gallery">
+        <h2 class="gallery__title">Галерея</h2>
+        
+        <div class="gallery__grid">
+          <figure class="figure">
+            <img class="figure__image" src="images/book1-back.png" alt="Задняя сторона обложки" />
+            <figcaption class="figure__caption">Задняя сторона обложки</figcaption>
+          </figure>
+          
+          <figure class="figure">
+            <img class="figure__image" src="images/book1-inside.png" alt="Фрагмент страниц книги" />
+            <figcaption class="figure__caption">Фрагмент страниц книги</figcaption>
+          </figure>
+        </div>
+      </section>
 
-    <script src="js/script.js"></script>
-  </body>
+      <section class="similar">
+        <h2 class="similar__title">Похожие книги</h2>
+        
+        <div class="similar__grid">
+          <article class="book-preview">
+            <h3 class="book-preview__title">Анна Каренина</h3>
+            <img class="book-preview__image" src="images/book2.png" alt="Обложка книги Анна Каренина" />
+          </article>
+          
+          <article class="book-preview">
+            <h3 class="book-preview__title">Тихий Дон</h3>
+            <img class="book-preview__image" src="images/book3.png" alt="Обложка книги Тихий Дон" />
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <aside class="sidebar">
+      <h2 class="sidebar__title">Новости библиотеки</h2>
+      <p class="sidebar__text">Скоро поступление новых исторических романов.</p>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p class="footer__text">&copy 2026 Digital Library. Все права защищены.</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
 </html>

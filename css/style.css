@@ -14,46 +14,44 @@ body {
 img {
   max-width: 100%;
   height: auto;
-}
-
-main {
-  max-width: 1200px;
-  margin: 60px auto;
-  padding: 0 20px;
+  display: block;
 }
 
 .layout {
   display: grid;
   grid-template-columns: 1fr;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
 }
 
 .skip-link {
   position: absolute;
   top: -100px;
   left: 20px;
-
   background: var(--color-primary);
   color: white;
-
-  padding: 10px 20px;
-
+  padding: var(--space-sm) var(--space-md);
   font-family: var(--font-accent);
   font-style: italic;
-
   border-radius: 6px;
-
-  transition: top 0.3s;
+  z-index: 1000;
 }
 
 .skip-link:focus {
   top: 20px;
 }
 
-/* Desktop layout */
+@media (min-width: 768px) {
+  .layout {
+    padding: 0 var(--space-lg);
+  }
+}
 
 @media (min-width: 1024px) {
   .layout {
     grid-template-columns: 3fr 1fr;
-    gap: 40px;
+    gap: var(--space-lg);
+    padding: 0 var(--space-lg);
   }
 }
