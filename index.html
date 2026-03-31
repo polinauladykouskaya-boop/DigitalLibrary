@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DigitalLibrary</title>
-
+  <title>DigitalLibrary — Война и мир</title>
+  
   <link rel="stylesheet" href="css/variables.css" />
   <link rel="stylesheet" href="css/styles.css" />
   <link rel="stylesheet" href="css/header.css" />
@@ -13,127 +13,226 @@
   <link rel="stylesheet" href="css/reviews.css" />
   <link rel="stylesheet" href="css/favorites.css" />
   <link rel="stylesheet" href="css/footer.css" />
-
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
 </head>
-
 <body>
+  <a href="#main" class="skip-link">Перейти к основному содержимому</a>
 
-<header class="header">
-  <div class="header__top">
-    <img class="header__logo" src="images/logo.png" alt="Логотип" />
-    <button class="header__burger" id="burger">&equiv;</button>
+  <header class="header">
+    <div class="header__top">
+      <img 
+        class="header__logo" 
+        src="images/logo.png" 
+        alt="Логотип библиотеки Digital Library" 
+      />
+      
+      <button class="header__burger" id="burger">&equiv;</button>
+      
+      <nav class="nav" id="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a href="#" class="nav__link">Главная</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Каталог</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Новинки</a>
+          </li>
+          <li class="nav__item">
+            <a href="#" class="nav__link">Контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    
+    <div class="header__bottom">
+      <h1 class="header__title">Digital Library</h1>
+    </div>
+  </header>
 
-    <nav class="nav" id="nav">
-      <ul class="nav__list">
-        <li class="nav__item">
-          <a href="#" class="nav__link" onclick="showPage('home')">Главная</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link" onclick="showPage('books')">Каталог</a>
-        </li>
-      </ul>
-    </nav>
+  <div class="user-panel">
+    <div class="user-panel__container">
+      <div class="search-widget">
+        <h3 class="search-widget__title">Поиск книг</h3>
+        <div class="search-widget__container">
+          <input type="text" id="search-input" class="search-widget__input" 
+                 placeholder="Введите название или автора..." autocomplete="off">
+          <div id="search-suggestions" class="search-widget__suggestions"></div>
+        </div>
+      </div>
+      
+      <div class="favorites-widget"></div>
+    </div>
   </div>
 
-  <div class="header__bottom">
-    <h1 class="header__title">Digital Library</h1>
-  </div>
-</header>
-
-<div class="layout">
-
-<section id="home" class="news">
-  <h2 class="news__title">Новости</h2>
-
-  <form id="news-form" class="news-form">
-    <input id="news-title" class="form-input" placeholder="Заголовок" required>
-    <textarea id="news-text" class="form-textarea" placeholder="Текст" required></textarea>
-    <button class="button button--primary">Добавить</button>
-  </form>
-
-  <input id="news-search" class="form-input" placeholder="Поиск новостей">
-
-  <div id="news-list" class="news-list"></div>
-</section>
-
-<section id="books" class="books" style="display:none;">
-  <h2 class="books__title">Книги</h2>
-
-  <form id="book-form" class="book-form">
-    <input id="book-title" class="form-input" placeholder="Название" required>
-    <input id="book-author" class="form-input" placeholder="Автор" required>
-    <button class="button button--primary">Добавить</button>
-  </form>
-
-  <select id="sort-books" class="form-input">
-    <option value="title">По названию</option>
-    <option value="date">По дате</option>
-  </select>
-
-  <div id="books-list" class="books-list"></div>
-</section>
-
-<section id="book-page" style="display:none;">
-  <button class="button button--secondary" onclick="showPage('books')">Назад</button>
-
-  <main class="main-content">
-
-    <article class="book-card">
-      <header class="book-card__header">
-        <h2 class="book-card__title">Война и мир</h2>
-      </header>
-
-      <figure class="figure">
-        <img class="figure__image" src="images/book1.png" alt="Обложка">
-        <figcaption class="figure__caption">Классический роман Льва Толстого</figcaption>
-      </figure>
-
-      <section class="section">
-        <h3 class="section__title">Описание книги</h3>
-        <p class="section__text">Роман-эпопея</p>
+  <div class="layout">
+    <main class="main-content" id="main">
+      <article class="book-card" itemscope itemtype="https://schema.org/Product">
+        <meta itemprop="additionalType" content="https://schema.org/Book" />
+        
+        <header class="book-card__header">
+          <h2 class="book-card__title" itemprop="name">Война и мир</h2>
+        </header>
+        
+        <figure class="figure">
+          <img 
+            class="figure__image" 
+            src="images/book1.png" 
+            alt="Обложка книги Война и мир" 
+            itemprop="image" 
+          />
+          <figcaption class="figure__caption">
+            Классический роман Льва Толстого
+          </figcaption>
+        </figure>
+        
+        <section class="section">
+          <h3 class="section__title">Описание книги</h3>
+          <p class="section__text" itemprop="description">
+            «Война и мир» — роман-эпопея Льва Толстого
+          </p>
+        </section>
+        
+        <section class="section">
+          <h3 class="section__title">Характеристики</h3>
+          
+          <p class="section__text">
+            <span class="section__label">Автор:</span> 
+            <span class="section__value" itemprop="author">Лев Толстой</span>
+          </p>
+          <p class="section__text">
+            <span class="section__label">ISBN:</span> 
+            <span class="section__value" itemprop="isbn">978-5-17-118366-3</span>
+          </p>
+          <p class="section__text">
+            <span class="section__label">Год публикации:</span>
+            <time class="section__value" itemprop="datePublished" datetime="1869">1869</time>
+          </p>
+          <p class="section__text">
+            <span class="section__label">Жанр:</span> 
+            <span class="section__value" itemprop="genre">Исторический роман</span>
+          </p>
+        </section>
+        
+        <section class="section section--offer" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+          <h3 class="section__title">Доступность</h3>
+          
+          <meta itemprop="priceCurrency" content="BYN" />
+          <meta itemprop="price" content="10" />
+          <link itemprop="availability" href="https://schema.org/InStock" />
+          
+          <p class="section__text section__text--availability">
+            В наличии
+          </p>
+        </section>
+        
+        <div class="favorite-button-container">
+          <button class="button button--favorite" data-book-id="war-and-peace">
+            <span class="favorite-icon">♥</span> В избранное
+          </button>
+        </div>
+      </article>
+      
+      <section class="gallery">
+        <h2 class="gallery__title">Галерея</h2>
+        
+        <div class="gallery__grid">
+          <figure class="figure">
+            <img class="figure__image" src="images/book1-back.png" alt="Задняя сторона обложки" />
+            <figcaption class="figure__caption">Задняя сторона обложки</figcaption>
+          </figure>
+          
+          <figure class="figure">
+            <img class="figure__image" src="images/book1-inside.png" alt="Фрагмент страниц книги" />
+            <figcaption class="figure__caption">Фрагмент страниц книги</figcaption>
+          </figure>
+        </div>
       </section>
 
-      <div class="favorite-button-container">
-        <button class="button button--favorite" data-book-id="war-and-peace">
-          <span class="favorite-icon">♥</span> В избранное
-        </button>
-      </div>
-    </article>
-
-    <section class="reviews-section">
-      <h2 class="reviews-section__title">Отзывы</h2>
-
-      <div id="reviews-list"></div>
-
-      <form id="review-form" class="reviews-form">
-        <input id="review-name" class="form-input" placeholder="Имя" required>
-        <textarea id="review-text" class="form-textarea" required></textarea>
-
-        <div id="rating-input">
-          <span class="star" data-rating="1">★</span>
-          <span class="star" data-rating="2">★</span>
-          <span class="star" data-rating="3">★</span>
-          <span class="star" data-rating="4">★</span>
-          <span class="star" data-rating="5">★</span>
+      <section class="similar">
+        <h2 class="similar__title">Похожие книги</h2>
+        
+        <div class="similar__grid">
+          <article class="book-preview">
+            <h3 class="book-preview__title">Анна Каренина</h3>
+            <img class="book-preview__image" src="images/book2.png" alt="Обложка книги Анна Каренина" />
+            <button class="button button--favorite button--small" data-book-id="anna-karenina" 
+                    style="margin-top: 10px; width: 100%;">
+              <span class="favorite-icon">♥</span> В избранное
+            </button>
+          </article>
+          
+          <article class="book-preview">
+            <h3 class="book-preview__title">Тихий Дон</h3>
+            <img class="book-preview__image" src="images/book3.png" alt="Обложка книги Тихий Дон" />
+            <button class="button button--favorite button--small" data-book-id="quiet-don" 
+                    style="margin-top: 10px; width: 100%;">
+              <span class="favorite-icon">♥</span> В избранное
+            </button>
+          </article>
         </div>
+      </section>
+      
+      <section class="reviews-section">
+        <h2 class="reviews-section__title">Отзывы читателей</h2>
+        
+        <div class="reviews-section__rating">
+          <span class="rating-label">Средняя оценка:</span>
+          <div class="rating-stars" id="average-rating-stars">
+            ☆☆☆☆☆
+          </div>
+          <span class="rating-value" id="average-rating-value">0.0</span>
+        </div>
+        
+        <div class="reviews-list" id="reviews-list">
+        </div>
+        
+        <section class="reviews-form">
+          <h3 class="reviews-form__title">Добавить отзыв</h3>
+          <form id="review-form">
+            <div class="form-group">
+              <label for="review-name" class="form-label">Ваше имя:</label>
+              <input type="text" id="review-name" class="form-input" required minlength="2">
+            </div>
+            
+            <fieldset class="form-group">
+              <legend class="form-label">Оценка:</legend>
+              <div class="rating-input" id="rating-input">
+                <span class="star" data-rating="1" role="button" tabindex="0" aria-label="Оценка 1">★</span>
+                <span class="star" data-rating="2" role="button" tabindex="0" aria-label="Оценка 2">★</span>
+                <span class="star" data-rating="3" role="button" tabindex="0" aria-label="Оценка 3">★</span>
+                <span class="star" data-rating="4" role="button" tabindex="0" aria-label="Оценка 4">★</span>
+                <span class="star" data-rating="5" role="button" tabindex="0" aria-label="Оценка 5">★</span>
+              </div>
+              <input type="hidden" id="review-rating" value="0">
+            </fieldset>
+            
+            <div class="form-group">
+              <label for="review-text" class="form-label">Ваш отзыв:</label>
+              <textarea id="review-text" class="form-textarea" rows="3" required minlength="10"></textarea>
+            </div>
+            
+            <button type="submit" class="button button--primary">Оставить отзыв</button>
+          </form>
+        </section>
+      </section>
+    </main>
 
-        <input type="hidden" id="review-rating" value="0">
+    <aside class="sidebar">
+      <h2 class="sidebar__title">Новости библиотеки</h2>
+      <p class="sidebar__text">Скоро поступление новых исторических романов.</p>
+    </aside>
+  </div>
 
-      <button class="button button--primary">Отправить</button>
-      </form>
-    </section>
+  <footer class="footer">
+    <p class="footer__text">&copy; 2026 Digital Library. Все права защищены.</p>
+  </footer>
 
-  </main>
-</section>
-
-</div>
-
-<footer class="footer">
-  <p class="footer__text">&copy; 2026 Digital Library</p>
-</footer>
-
-<script type="module" src="js/script.js"></script>
-
+  <script type="module" src="js/script.js"></script>
 </body>
 </html>
